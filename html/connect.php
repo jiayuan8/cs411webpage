@@ -18,7 +18,7 @@
 
         $reslut=mysql_query($q,$con);
 
-        echo $q;
+        echo $reslut;
 
         return $con;
     }
