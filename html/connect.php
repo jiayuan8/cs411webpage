@@ -12,13 +12,26 @@
 
         mysql_select_db('flightdb',$con);
 
-        echo "switching to flightdb database";
+        echo "switching to flightdb database<br>";
 
-        $q = 'select distinct airline from delay_info';
+        $q = 'select distinct airline from delay_info<br>';
 
         $reslut=mysql_query($q,$con);
 
-        echo $reslut;
+        if ($result)   
+        {  
+            if ($result->num_rows>0)  
+            {  
+                while ($rows = $result->fetch_array()) {  
+                    print_r($rows);  
+                    echo "<BR>rows['airline']:".$rows['airline'];  
+                }//end while()  
+            }else{  
+                echo "<BR>查询结果为空！";     
+            }//end if()  
+        }else{  
+            echo "<BR>查询失败！";   
+        }
 
         return $con;
     }
