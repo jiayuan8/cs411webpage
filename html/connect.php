@@ -9,6 +9,17 @@
             die("can't connect".mysql_error());
         }
         echo "connected";
+
+        mysql_select_db('flightdb',$con);
+
+        echo "switching to flightdb database";
+
+        $q = 'select distinct airline from delay_info';
+
+        $reslut=mysql_query($q,$con);
+
+        echo $q;
+
         return $con;
     }
 
