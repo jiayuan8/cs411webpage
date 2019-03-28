@@ -18,6 +18,8 @@
 
         $reslut=mysql_query($q);
 
+        echo $result;
+
         if ($result)   
         {  
             if ($result->num_rows>0)  
