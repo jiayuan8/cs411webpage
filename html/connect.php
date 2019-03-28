@@ -16,7 +16,7 @@
 
         $q = 'select distinct airline from delay_info';
 
-        $reslut=mysql_query($q,$con);
+        $reslut=mysql_query($q);
 
         if ($result)   
         {  
