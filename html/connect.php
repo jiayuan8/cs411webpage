@@ -14,7 +14,7 @@
 
         echo "switching to flightdb database<br>";
 
-        $q = 'select distinct airline from delay_info<br>';
+        $q = 'select distinct airline from delay_info';
 
         $reslut=mysql_query($q,$con);
 
