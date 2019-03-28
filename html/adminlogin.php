@@ -1,6 +1,8 @@
 <?php 
     header("Content-Type: text/html; charset=utf8");
 
+    echo $_POST['submit'];
+
     if(!isset($_POST['submit'])){
         exit("error");
     }//判断是否有submit操作
